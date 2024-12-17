@@ -1,17 +1,18 @@
 
-import { BrowserRouter, Route, Router } from 'react-router'
+import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import db from './database/db'
+import HomePage from './Pages/HomePage';
 function App() {
   console.log(db);
 
   return (
     <>
       <BrowserRouter>
-        <Router>
+        <Routes>
 
           <Route index element={<HomePage />} />
-        </Router>
+        </Routes>
 
       </BrowserRouter>
     </>
