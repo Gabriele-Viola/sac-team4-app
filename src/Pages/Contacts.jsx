@@ -20,6 +20,7 @@ export default function Contacts() {
         <>
             <div className="container text-center">
 
+
                 <Searchbar />
 
                 <h1 className="mb-4">{travel.destinazione}</h1>
