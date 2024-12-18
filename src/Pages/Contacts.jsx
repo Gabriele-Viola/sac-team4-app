@@ -31,17 +31,16 @@ export default function Contacts() {
                                     </div>
                                 </div>
                                 <div className='d-none' id={single.codice_fiscale}>
-                                    <div>
-                                        email: {single.email}
+                                    <div className="d-flex justify-content-between">
+                                        <span>email:</span><span>{single.email}</span>
                                     </div>
-                                    <div>
-                                        codice fiscale: {single.codice_fiscale}
+                                    <div className="d-flex justify-content-between">
+                                        <span>codice fiscale:</span><span>{single.codice_fiscale}</span>
                                     </div>
-                                    <div>
-                                        numero di telefono: {single.numero_telefono}
+                                    <div className="d-flex justify-content-between">
+                                        <span>numero di telefono: </span><span>{single.numero_telefono}</span>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     )}
