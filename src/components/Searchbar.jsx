@@ -8,7 +8,6 @@ export default function Searchbar() {
 
     const { id } = useParams()
 
-    //const [travels, setTravels] = useState(db)
 
     const travel = travels[id].partecipanti
     console.log(travel);
@@ -19,14 +18,13 @@ export default function Searchbar() {
 
     const [searchText, setSearchText] = useState('')
 
-    //const [filteredParticipants, setFilteredParticipants] = useState([])
 
     function handleFormData(e) {
         e.preventDefault()
     }
 
     useEffect(() => {
-        const filteredParticipants = participants.filter((participant) => participant.nome.includes(searchText))
+        const filteredParticipants = participants.filter((participant) => participant.nome.toLowerCase().startsWith(searchText.toLowerCase()))
         setFilteredParticipants(filteredParticipants)
     }, [searchText])
 
