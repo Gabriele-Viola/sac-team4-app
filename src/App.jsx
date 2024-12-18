@@ -1,4 +1,4 @@
-
+import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router'
 import './App.css'
 import db from './database/db'
@@ -7,10 +7,13 @@ import Contacts from './Pages/Contacts';
 import GlobalContext from './contexts/GlobalContext';
 
 function App() {
-  console.log(db);
 
   const [travels, setTravels] = useState(db)
   const [filteredParticipants, setFilteredParticipants] = useState([])
+
+  console.log(db);
+  console.log(travels);
+
 
 
   return (

@@ -34,8 +34,12 @@ export default function Searchbar() {
 
 
     return (
-        <form onSubmit={handleFormData}>
-            <input type="search" placeholder="Inserisci il nome" value={searchText} onChange={e => setSearchText(e.target.value)} />
-        </form>
+        <div className="container ">
+
+            <form onSubmit={handleFormData}>
+                <label htmlFor="search"></label>
+                <input type="search" placeholder="Inserisci il nome" id="search" name="search" className="form-control w-50 m-auto" value={searchText} onChange={e => setSearchText(e.target.value)} />
+            </form>
+        </div>
     )
 }
