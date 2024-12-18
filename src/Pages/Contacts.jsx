@@ -23,7 +23,7 @@ export default function Contacts() {
                 {filteredParticipants.length == 0 ? <h1 className="text-danger"> <i class="bi bi-exclamation-circle-fill"></i> no found </h1>
                     : filteredParticipants.map((single, index) =>
                         <div className="card col-9 col-md-6 m-auto mb-3" key={index}>
-                            <div className="card-body" id={index} onClick={(e) => handletoggle(single)}>
+                            <div className="card-body" id={index} onClick={() => handletoggle(single)}>
                                 <div className="d-flex justify-content-between align-items-center">
                                     <div>
                                         <span>{single.nome} </span>

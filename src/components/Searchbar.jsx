@@ -19,12 +19,8 @@ export default function Searchbar() {
     const [searchText, setSearchText] = useState('')
 
 
-    function handleFormData(e) {
-        e.preventDefault()
-    }
-
     useEffect(() => {
-        const filteredParticipants = participants.filter((participant) => participant.nome.toLowerCase().startsWith(searchText.toLowerCase()))
+        const filteredParticipants = participants.filter((participant) => participant.nome.toLowerCase().startsWith(searchText.toLowerCase()) || participant.cognome.toLowerCase().startsWith(searchText.toLowerCase()))
         setFilteredParticipants(filteredParticipants)
     }, [searchText])
 
@@ -34,7 +30,7 @@ export default function Searchbar() {
     return (
         <div className="container ">
 
-            <form onSubmit={handleFormData}>
+            <form >
                 <label htmlFor="search"></label>
                 <input type="search" placeholder="Inserisci il nome" id="search" name="search" className="form-control w-50 m-auto" value={searchText} onChange={e => setSearchText(e.target.value)} />
             </form>
